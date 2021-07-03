@@ -1,5 +1,14 @@
 document.addEventListener("DOMContentLoaded", function (event) {
     fetchData();
+
+    document.getElementById('header-two').addEventListener('click', function (e) {
+        document.getElementById('cards').style.display = 'flex'
+        document.getElementById('header').style.display = 'flex'
+        document.getElementById('header-two').style.display = 'none'
+        const blogs = document.getElementById('blogs')
+        document.getElementById('body').removeChild(blogs)
+    })
+
 })
 
 function fetchData() {
@@ -45,7 +54,33 @@ function card(data) {
     btn.addEventListener('click', function (e) {
         document.getElementById('cards').style.display = 'none'
         document.getElementById('header').style.display = 'none'
+        document.getElementById('header-two').style.display = 'flex'
+        getUsersPost(data.id)
     })
     return div;
+}
+
+function getUsersPost(id) {
+    const section = document.createElement('section')
+    section.id = 'blogs'
+    fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`).
+        then(posts => posts.json()).
+        then(posts => {
+            posts.forEach((post) => {
+                console.log(post)
+                const title = document.createElement('p')
+                title.className = 'blog-title'
+                title.innerText = post.title
+
+                const body = document.createElement('p')
+                body.className = 'blog-body'
+                body.innerText = post.body
+
+                section.appendChild(title)
+                section.appendChild(body)
+
+            })
+        })
+    document.body.appendChild(section)
 }
 

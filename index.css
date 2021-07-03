@@ -87,3 +87,13 @@ header input {
   background-color: #6d9fd5;
   border-radius: 5px;
 }
+
+.block-title {
+  display: none;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.blog-body {
+  display: none;
+}
