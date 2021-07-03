@@ -1,0 +1,89 @@
+html {
+  padding: 0%;
+  margin: 0%;
+  background-color: #f5f5f5;
+  font-family: "Courier New", Courier, monospace;
+}
+body {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+header {
+  padding-top: 100px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+header input {
+  height: 30px;
+  padding: 0%;
+  border-radius: 5px;
+  border: 1px #3d3d3d solid;
+}
+
+.title {
+  font-size: xx-large;
+  text-align: center;
+  font-weight: 900;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: auto;
+}
+
+.card {
+  height: fit-content;
+  width: 250px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  background-color: #fdfdfd;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.header {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #dadada;
+  color: #3d3d3d;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.name {
+  font-weight: 900;
+  text-align: center;
+  word-wrap: break-word;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: small;
+}
+
+.email {
+  text-align: center;
+  word-wrap: break-word;
+  width: 100%;
+  padding-bottom: 10px;
+  font-size: small;
+}
+
+.btn {
+  padding: 10px;
+  background-color: #6d9fd5;
+  border-radius: 5px;
+}
