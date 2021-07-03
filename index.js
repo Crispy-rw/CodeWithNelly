@@ -1,9 +1,4 @@
 document.addEventListener("DOMContentLoaded", function (event) {
-    // const section = document.getElementById('cards')
-    // section.appendChild(data({ name: "Okk", email: "oko" }))
-    // console.log('====================================');
-    // console.log(section);
-    // console.log('====================================');
     fetchData();
 })
 
