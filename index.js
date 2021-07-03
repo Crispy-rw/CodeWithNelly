@@ -5,10 +5,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
         document.getElementById('cards').style.display = 'flex'
         document.getElementById('header').style.display = 'flex'
         document.getElementById('header-two').style.display = 'none'
+        document.getElementById('blogs').style.display = 'none'
         const blogs = document.getElementById('blogs')
-        document.getElementById('body').removeChild(blogs)
+        console.log(blogs)
+        blogs.parentNode.removeChild(blogs)
+        window.post = false
     })
-
 })
 
 function fetchData() {
@@ -67,20 +69,19 @@ function getUsersPost(id) {
         then(posts => posts.json()).
         then(posts => {
             posts.forEach((post) => {
-                console.log(post)
                 const title = document.createElement('p')
                 title.className = 'blog-title'
                 title.innerText = post.title
 
-                const body = document.createElement('p')
-                body.className = 'blog-body'
-                body.innerText = post.body
+                const bodys = document.createElement('p')
+                bodys.className = 'blog-body'
+                bodys.innerText = post.body
 
                 section.appendChild(title)
-                section.appendChild(body)
+                section.appendChild(bodys)
 
+                document.body.appendChild(section)
             })
         })
-    document.body.appendChild(section)
 }
 

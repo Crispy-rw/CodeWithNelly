@@ -97,3 +97,7 @@ header input {
 .blog-body {
   display: none;
 }
+
+.blogs {
+  display: inline;
+}
